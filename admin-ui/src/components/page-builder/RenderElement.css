@@ -1,0 +1,108 @@
+.container-element,
+.element-wrapper {
+  position: relative;
+  transition: all 0.2s ease;
+  /* width: 100%; */
+}
+
+.hovered {
+  outline: 2px solid rgba(64, 169, 255, 0.5);
+  outline-offset: -2px;
+}
+
+.selected {
+  outline: 2px solid #1890ff;
+  outline-offset: -2px;
+}
+
+.element-type-label {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  background-color: #1890ff;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 2px;
+  z-index: 100;
+}
+
+.container-element:hover {
+  border-color: #40a9ff !important;
+}
+
+.container-element.selected {
+  border-color: #1890ff !important;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.dropzone {
+  min-height: 40px;
+  margin: 4px 0;
+  border: 2px dashed #e8e8e8;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.02);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.dropzone.empty {
+  min-height: 80px;
+}
+
+.dropzone:hover,
+.dropzone.is-over {
+  border-color: #40a9ff;
+  background-color: rgba(24, 144, 255, 0.05);
+}
+
+.dropzone-content {
+  text-align: center;
+  color: #999;
+}
+
+.dropzone-icon {
+  margin-bottom: 8px;
+}
+
+.dropzone-text {
+  font-size: 14px;
+  text-align: center;
+}
+
+.element-controls {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  display: flex;
+  gap: 4px;
+  z-index: 101;
+}
+.render-element {
+  flex: 1;
+  min-height: 50px;
+  border: 1px dashed lightgray;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.render-element:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.column-container {
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.column-container:hover {
+  border-color: #40a9ff !important;
+}
+
+.column-container.selected {
+  border-color: #1890ff !important;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}

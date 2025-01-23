@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.ant-menu-item {
+  border-inline-end: 0 !important;
+}
+.full-screen-spin-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* width */
+::-webkit-scrollbar {
+  height: 5px;
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 7px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(99, 97, 97);
+  border-radius: 5px;
+}
+
+.ant-menu-sub {
+  background-color: transparent !important;
+}
+
+.events {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.events .ant-badge-status {
+  width: 100%;
+  overflow: hidden;
+  font-size: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.notes-month {
+  font-size: 28px;
+  text-align: center;
+}
+.notes-month > section {
+  font-weight: bold;
+  font-size: 16px !important;
+}
+
+.notes-month section {
+  font-size: 28px;
+}
+.ant-picker-calendar {
+  padding: 10px !important;
+}
+
+.ql-container.ql-snow {
+  height: 150px;
+}
+
+.search .ant-form-item {
+  margin-bottom: 0 !important;
+}
+.custom-table th,
+.custom-table td {
+  font-size: 12px !important;
+}

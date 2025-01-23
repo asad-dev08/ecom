@@ -1,0 +1,250 @@
+/* Custom styles for Ant Design dropdowns */
+.ant-dropdown {
+  @apply rounded-lg shadow-lg;
+}
+
+.ant-dropdown-menu {
+  @apply rounded-lg border border-gray-100;
+}
+
+.ant-dropdown-menu-item {
+  @apply px-4 py-2 text-gray-700 hover:text-primary-600 hover:bg-primary-50;
+}
+
+.ant-dropdown-menu-item-group-title {
+  @apply px-4 py-2 text-sm font-semibold text-gray-900 bg-gray-50;
+}
+
+.ant-dropdown-menu-item-group-list {
+  @apply py-1;
+}
+
+/* Hover animation for dropdown items */
+.ant-dropdown-menu-item:hover {
+  @apply transition-all duration-200;
+}
+
+/* Nested menu styles */
+.ant-dropdown-menu-submenu-title {
+  @apply flex items-center justify-between;
+}
+
+.ant-dropdown-menu-submenu > .ant-dropdown-menu {
+  @apply mt-0 ml-0;
+}
+
+.ant-dropdown-menu-submenu:hover > .ant-dropdown-menu {
+  @apply block;
+}
+
+/* Badge styles */
+.menu-badge {
+  @apply ml-2 px-1.5 py-0.5 text-xs rounded text-white;
+}
+
+.menu-badge-new {
+  @apply bg-accent-500;
+}
+
+/* Navbar Styles */
+.navbar-fixed {
+  @apply fixed w-full top-0 z-50 bg-white transition-all duration-300;
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 1024px) {
+  .mobile-menu {
+    @apply fixed inset-0 bg-white z-50 transform transition-transform duration-300;
+  }
+
+  .mobile-menu.hidden {
+    @apply translate-x-full;
+  }
+
+  .mobile-menu.visible {
+    @apply translate-x-0;
+  }
+}
+
+/* Add padding to main content to account for fixed navbar */
+.main-content {
+  @apply pt-[64px] lg:pt-[130px];
+}
+.main-content-scrolled {
+  @apply pt-[64px] lg:pt-[235px];
+}
+.container {
+  @apply px-4 md:px-8 lg:px-16;
+}
+
+/* Active filter tag animations */
+@keyframes filterTagIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.active-filter-tag {
+  animation: filterTagIn 0.2s ease-out;
+}
+
+/* Optional: Add hover animation for remove button */
+.active-filter-tag button {
+  transition: transform 0.2s ease;
+}
+
+.active-filter-tag button:hover {
+  transform: scale(1.1);
+}
+
+/* Add these styles */
+.auth-tabs .ant-tabs-nav {
+  margin-bottom: 24px;
+}
+
+.auth-tabs .ant-tabs-tab {
+  flex: 1;
+  justify-content: center;
+}
+
+.auth-tabs .ant-tabs-nav-list {
+  width: 100%;
+}
+
+/* Auth Modal Styles */
+.auth-modal .ant-modal-content {
+  border-radius: 16px;
+  padding: 0;
+}
+
+.auth-modal .ant-modal-close {
+  top: 16px;
+  right: 16px;
+}
+
+.auth-modal .ant-modal-close-x {
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+}
+
+.auth-modal .auth-tabs .ant-tabs-nav {
+  margin-bottom: 24px;
+}
+
+.auth-modal .auth-tabs .ant-tabs-nav::before {
+  border: none;
+}
+
+.auth-modal .auth-tabs .ant-tabs-tab {
+  padding: 8px 0;
+  margin: 0 16px;
+  font-size: 16px;
+}
+
+.auth-modal .auth-tabs .ant-tabs-tab + .ant-tabs-tab {
+  margin-left: 16px;
+}
+
+.auth-modal .auth-tabs .ant-tabs-ink-bar {
+  height: 3px;
+  border-radius: 3px;
+  background: theme("colors.secondary.600");
+}
+
+.auth-modal .auth-input {
+  border-radius: 8px;
+}
+
+.auth-modal .auth-input:hover,
+.auth-modal .auth-input:focus {
+  border-color: theme("colors.secondary.600");
+  box-shadow: none;
+}
+
+.auth-modal .ant-input-prefix {
+  margin-right: 12px;
+}
+
+.auth-modal .ant-form-item-explain-error {
+  margin-top: 4px;
+  font-size: 13px;
+}
+
+/* Social Login Buttons Hover Effects */
+.auth-modal .social-login-btn {
+  transition: all 0.3s ease;
+}
+
+.auth-modal .social-login-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Checkbox Styles */
+.auth-modal input[type="checkbox"] {
+  @apply rounded border-gray-300;
+}
+
+.auth-modal input[type="checkbox"]:checked {
+  @apply bg-secondary-600 border-secondary-600;
+}
+
+/* Button Loading State */
+.auth-modal .ant-btn-loading {
+  opacity: 0.8;
+}
+
+/* Account Dropdown Styles */
+.ant-dropdown-menu {
+  @apply rounded-lg shadow-lg border border-gray-100;
+}
+
+.ant-dropdown-menu-item {
+  @apply py-2.5 px-4;
+}
+
+.ant-dropdown-menu-item:hover {
+  @apply bg-gray-50;
+}
+
+.ant-dropdown-menu-item-divider {
+  @apply my-2;
+}
+
+/* Avatar border animation on hover */
+.account-avatar {
+  @apply transition-all duration-300;
+}
+
+.account-dropdown:hover .account-avatar {
+  @apply border-secondary-500;
+}
+
+/* Menu item hover effects */
+.ant-dropdown-menu-item a {
+  @apply transition-colors duration-200;
+}
+
+.ant-dropdown-menu-item:hover a {
+  @apply text-secondary-600;
+}
+
+/* Danger item (logout) styles */
+.ant-dropdown-menu-item-danger {
+  @apply text-red-600;
+}
+
+.ant-dropdown-menu-item-danger:hover {
+  @apply bg-red-50 text-red-700;
+}
+
+.custom-swiper .swiper-button-next,
+.custom-swiper .swiper-button-prev {
+  color: #059669; /* Change this to your desired cursor color */
+}
